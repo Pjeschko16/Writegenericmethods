@@ -1,15 +1,19 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        String[] words = {"Java", "is", "fun", "and", "powerful"};
+        System.out.println("Original String array: " + Arrays.toString(words));
+        GenericUtils.reverse(words);
+        System.out.println("Reversed String array: " + Arrays.toString(words));
+        System.out.println("---");
+        Integer[] ints = {10, 20, 30, 40};
+        double intSum = GenericUtils.sum(ints);
+        System.out.println("Integer array: " + Arrays.toString(ints));
+        System.out.println("Sum of Integers: " + intSum);
+        Double[] doubles = {1.5, 2.5, 3.5};
+        double doubleSum = GenericUtils.sum(doubles);
+        System.out.println("Double array: " + Arrays.toString(doubles));
+        System.out.println("Sum of Doubles: " + doubleSum);
     }
 }
